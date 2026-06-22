@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Política de Privacidade — Curupira</title>
+  <style>
+    :root { color-scheme: light; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 24px 20px 64px;
+      line-height: 1.6;
+      color: #1a1a1a;
+      background: #fdfdfb;
+    }
+    h1 { font-size: 1.7rem; line-height: 1.25; margin: 0 0 4px; }
+    h2 {
+      font-size: 1.2rem;
+      margin: 2em 0 0.4em;
+      padding-top: 0.4em;
+      border-top: 1px solid #e6e3dc;
+    }
+    p, li { font-size: 1rem; }
+    a { color: #b3471f; }
+    .meta { color: #555; font-size: 0.92rem; margin: 0 0 1.5em; }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 0.5em 0 1em;
+      font-size: 0.95rem;
+    }
+    th, td {
+      border: 1px solid #d9d5cc;
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #f3f0e9; }
+    footer { margin-top: 3em; color: #777; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <h1>Política de Privacidade — Curupira</h1>
+  <p class="meta">
+    Responsável: Felipe Dias &middot;
+    Contato de privacidade: <a href="mailto:felipe.curupira777@gmail.com">felipe.curupira777@gmail.com</a><br>
+    Última atualização: 11 de junho de 2026
+  </p>
+
+  <h2>Resumo</h2>
+  <p>
+    O Curupira avisa você sobre focos de queimadas perto das suas zonas em
+    Mato Grosso. Em poucas palavras:
+  </p>
+  <ul>
+    <li>Não tem cadastro nem login.</li>
+    <li>Seu aparelho usa um identificador anônimo, gerado no próprio aparelho.</li>
+    <li>Não vendemos seus dados.</li>
+    <li>Não temos publicidade.</li>
+    <li>Não fazemos perfis de comportamento (profiling).</li>
+  </ul>
+  <p>
+    O Curupira não é direcionado a crianças e não coleta intencionalmente dados
+    pessoais de crianças.
+  </p>
+
+  <h2>Dados que coletamos</h2>
+  <p>Coletamos só o necessário para o app funcionar:</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Dado</th>
+        <th>Para quê</th>
+        <th>Quem vê</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Identificador anônimo do aparelho (UUID gerado no aparelho; não é
+          ligado a nome, e-mail ou telefone)</td>
+        <td>Fazer as zonas, relatos e círculos funcionarem</td>
+        <td>Somente o servidor</td>
+      </tr>
+      <tr>
+        <td>Token de notificações (Google FCM)</td>
+        <td>Entregar alertas de focos próximos</td>
+        <td>Servidor + Google (operador da entrega)</td>
+      </tr>
+      <tr>
+        <td>Zonas de alerta (coordenadas + raio)</td>
+        <td>Avisar quando um foco aparece perto</td>
+        <td>Somente o servidor — nunca outros usuários</td>
+      </tr>
+      <tr>
+        <td>Horário silencioso</td>
+        <td>Silenciar alertas no horário escolhido</td>
+        <td>Somente o servidor</td>
+      </tr>
+      <tr>
+        <td>Relatos de fogo: status, observação, <strong>localização GPS precisa
+          no momento do relato</strong> e foto</td>
+        <td>Informar a comunidade sobre focos no terreno</td>
+        <td><strong>Públicos no mapa para todos os usuários</strong>; a foto tem
+          os dados embutidos (metadados técnicos da foto, como a localização onde
+          ela foi tirada) removidos no servidor antes de ser armazenada</td>
+      </tr>
+      <tr>
+        <td>Votos de "enganoso"</td>
+        <td>Moderação comunitária (o relato é ocultado com 3 votos)</td>
+        <td>Somente o servidor</td>
+      </tr>
+      <tr>
+        <td>Círculo de Segurança: código de pareamento + nome de exibição
+          escolhido</td>
+        <td>Alertar pessoas próximas sem trocar identidade</td>
+        <td>Membros do círculo veem apenas o nome de exibição</td>
+      </tr>
+      <tr>
+        <td>Relatórios de falhas (Google Crashlytics)</td>
+        <td>Encontrar e corrigir defeitos do app</td>
+        <td>Google (operador)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+    Relatórios anônimos de falhas vão para o Google Crashlytics (servidores fora
+    do Brasil) e são apagados em até 90 dias.
+  </p>
+
+  <h2>Com quem os dados ficam</h2>
+  <p>Usamos três operadores (processadores de dados), cada um para uma função:</p>
+  <ul>
+    <li><strong>Supabase</strong> — hospedagem do banco de dados e das funções;
+      região São Paulo, Brasil.</li>
+    <li><strong>Google Firebase Cloud Messaging</strong> — entrega das
+      notificações.</li>
+    <li><strong>Google Crashlytics</strong> — relatórios de falhas. Envolve
+      <strong>transferência internacional de dados</strong> (servidores fora do
+      Brasil), com retenção de até 90 dias; a transferência internacional é
+      amparada pelos termos de proteção de dados do Google (operador).</li>
+  </ul>
+  <p>
+    Os três atuam como <strong>operadores</strong> (processadores) nos termos da
+    LGPD. Nada é vendido nem compartilhado para fins de marketing, e não usamos
+    publicidade.
+  </p>
+
+  <h2>Por quanto tempo guardamos</h2>
+  <ul>
+    <li>Os dados do aparelho (identificador, zonas, círculos, horário silencioso)
+      ficam até você apagá-los.</li>
+    <li>Relatos ocultados pela moderação ficam imediatamente invisíveis para os
+      outros usuários; a foto é apagada dos servidores na limpeza diária (em até
+      24 horas).</li>
+    <li>Relatórios de falha são apagados pelo Google em até 90 dias.</li>
+  </ul>
+
+  <h2>Seus direitos (LGPD)</h2>
+  <p>
+    A Lei nº 13.709/2018 (LGPD), no art. 18, garante a você direitos sobre os
+    seus dados. No app, em <strong>Ajustes &rarr; Privacidade</strong>, você
+    mesmo exerce os principais:
+  </p>
+  <ul>
+    <li><strong>"Ver dados deste aparelho"</strong> — direito de acesso: mostra o
+      que está guardado neste aparelho.</li>
+    <li><strong>"Limpar dados locais"</strong> — recomeça com um novo
+      identificador anônimo neste aparelho.</li>
+    <li><strong>"Apagar todos os meus dados"</strong> — direito de eliminação:
+      apaga do servidor as suas zonas, os círculos que você criou e o seu
+      identificador. O seu nome de exibição sai de todos os círculos dos quais
+      você participava. Os relatos públicos que você já enviou permanecem, mas
+      sem ligação com o aparelho.</li>
+  </ul>
+  <p>
+    Para qualquer outra solicitação (correção, portabilidade, dúvidas), escreva
+    para <a href="mailto:felipe.curupira777@gmail.com">felipe.curupira777@gmail.com</a>.
+  </p>
+
+  <h2>Permissões do app</h2>
+  <ul>
+    <li><strong>Localização</strong> — usada somente ao criar zonas e ao
+      confirmar o local de um relato. <strong>Não há rastreamento em segundo
+      plano.</strong></li>
+    <li><strong>Câmera / Fotos</strong> — usada somente para anexar uma foto a um
+      relato.</li>
+    <li><strong>Notificações</strong> — usada para enviar os alertas de focos.</li>
+  </ul>
+
+  <h2>Alterações nesta política</h2>
+  <p>
+    Se houver mudanças importantes, avisaremos dentro do app. Esta página é
+    versionada em um repositório público, então o histórico de alterações fica
+    sempre disponível.
+  </p>
+
+  <footer>
+    Curupira — alertas de queimadas para Mato Grosso.
+    Dados de focos: INPE (Programa Queimadas) e NASA FIRMS.
+  </footer>
+</body>
+</html>
