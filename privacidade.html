@@ -47,7 +47,7 @@
   <p class="meta">
     Responsável: Felipe Dias &middot;
     Contato de privacidade: <a href="mailto:felipe.curupira777@gmail.com">felipe.curupira777@gmail.com</a><br>
-    Última atualização: 19 de julho de 2026
+    Última atualização: 10 de outubro de 2026
   </p>
 
   <h2>Resumo</h2>
@@ -81,7 +81,7 @@
       <tr>
         <td>Identificador anônimo do aparelho (UUID gerado no aparelho; não é
           ligado a nome, e-mail ou telefone)</td>
-        <td>Fazer as áreas, relatos e círculos funcionarem</td>
+        <td>Fazer as áreas, relatos e grupos funcionarem</td>
         <td>Somente o servidor</td>
       </tr>
       <tr>
@@ -92,14 +92,16 @@
       <tr>
         <td>Áreas de alerta (coordenadas + raio)</td>
         <td>Avisar quando um foco aparece perto</td>
-        <td>Somente o servidor — nunca outros usuários</td>
+        <td>As coordenadas e o raio: somente o servidor. Se você criar um grupo,
+          os membros recebem o NOME da área e a localização dos focos perto
+          dela — nunca as coordenadas nem o raio que você desenhou</td>
       </tr>
       <tr>
         <td>"Alertar perto de mim" (opcional, desligado por padrão): ao ativar,
           sua <strong>localização atual aproximada</strong> é enviada ao servidor
           como uma área de alerta temporária, atualizada quando você abre o app</td>
         <td>Avisar sobre focos perto de onde você está agora, sem criar uma área fixa</td>
-        <td>Somente o servidor — nunca outros usuários nem membros de círculos</td>
+        <td>Somente o servidor — nunca outros usuários nem membros de grupos</td>
       </tr>
       <tr>
         <td>E-mail de contato do teste fechado (opcional, apenas na versão beta;
@@ -124,10 +126,11 @@
         <td>Somente o servidor</td>
       </tr>
       <tr>
-        <td>Círculo de Segurança: código de pareamento + nome de exibição
+        <td>Grupo de alerta: código de pareamento + nome de exibição
           escolhido</td>
         <td>Alertar pessoas próximas sem trocar identidade</td>
-        <td>Membros do círculo veem apenas o nome de exibição</td>
+        <td>Os membros veem o seu nome de exibição e, nos alertas de quem
+          criou o grupo, o nome da área e a localização dos focos perto dela</td>
       </tr>
       <tr>
         <td>Relatórios de falhas (Google Crashlytics)</td>
@@ -168,8 +171,12 @@
 
   <h2>Por quanto tempo guardamos</h2>
   <ul>
-    <li>Os dados do aparelho (identificador, áreas, círculos, horário silencioso)
-      ficam até você apagá-los.</li>
+    <li>Os dados do aparelho (identificador, áreas, grupos, horário silencioso)
+      ficam até você apagá-los. O registro de um aparelho que não guarda nada
+      (nenhuma área, grupo, horário silencioso, relato ou voto) pode ser apagado
+      automaticamente: por exemplo, quando o app só foi usado na primeira hora
+      depois de instalado, ou quando foi desinstalado. Registros de aparelhos de
+      teste automatizado do Google Play são apagados em cerca de 1 dia.</li>
     <li>Relatos ocultados pela moderação ficam imediatamente invisíveis para os
       outros usuários. O registro é mantido apenas pelo tempo necessário para a
       moderação (evitar reincidência e abuso).</li>
@@ -189,9 +196,9 @@
       identificador anônimo neste aparelho.</li>
     <li><strong>"Apagar todos os meus dados"</strong> — direito de eliminação:
       apaga do servidor as suas áreas (incluindo a área temporária do "Alertar
-      perto de mim"), os círculos que você criou, o e-mail de contato do teste
+      perto de mim"), os grupos que você criou, o e-mail de contato do teste
       fechado (se você tiver fornecido) e o seu identificador. O seu nome de
-      exibição sai de todos os círculos dos quais você participava. Os relatos
+      exibição sai de todos os grupos dos quais você participava. Os relatos
       públicos que você já enviou permanecem, mas sem ligação com o aparelho.</li>
   </ul>
   <p>
